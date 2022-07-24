@@ -48,6 +48,8 @@ const remove_cps_urls = [
   "*://fonts.googleapis.com/*",
   "*://themes.googleusercontent.com/*",
   "*://fonts.gstatic.com/*",
+  "*://raw.githubusercontent.com/*",
+  "*://github.com/*",
   "*://*.google.com/*",
   "*://secure.gravatar.com/*",
   "*://www.gravatar.com/*",
@@ -231,6 +233,7 @@ chrome.webRequest.onBeforeRequest.addListener(
     url = url.replace("fonts.googleapis.com", "fonts.loli.net");
     url = url.replace("themes.googleusercontent.com", "themes.loli.net");
     url = url.replace("fonts.gstatic.com", "gstatic.loli.net");
+    url = url.replace("raw.githubusercontent.com", "raw.staticdn.net");
     url = url.replace(
       "www.google.com/recaptcha/",
       "www.recaptcha.net/recaptcha/"
@@ -252,6 +255,7 @@ chrome.webRequest.onBeforeRequest.addListener(
       "*://fonts.googleapis.com/*",
       "*://themes.googleusercontent.com/*",
       "*://fonts.gstatic.com/*",
+      "*://raw.githubusercontent.com/*",
       "*://www.google.com/recaptcha/*",
       "*://secure.gravatar.com/*",
       "*://www.gravatar.com/*",
